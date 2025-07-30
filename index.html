@@ -1,25 +1,425 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Guia de Calistenia</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      background: #f9f9f9;
-      padding: 30px;
-    }
-    iframe {
-      width: 90%;
-      height: 90vh;
-      border: none;
-      box-shadow: 0 0 10px rgba(0,0,0,0.3);
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master Calistenia - Transforme Seu Corpo com Exercícios Corporais</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+        }
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        .testimonial-card:hover {
+            transform: scale(1.03);
+        }
+    </style>
 </head>
-<body>
-  <h1>Transformando-se em um Atleta Calistênico</h1>
-  <iframe src="Transformando-se-em-um-Atleta-Calistenico-Guia-Completo.pdf"></iframe>
+<body class="font-sans antialiased text-gray-800">
+    <!-- Header/Navigation -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <i class="fas fa-dumbbell text-blue-600 text-3xl mr-2"></i>
+                <span class="text-xl font-bold text-blue-600">Master Calistenia</span>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#beneficios" class="text-gray-700 hover:text-blue-600 font-medium">Benefícios</a>
+                <a href="#conteudo" class="text-gray-700 hover:text-blue-600 font-medium">Conteúdo</a>
+                <a href="#depoimentos" class="text-gray-700 hover:text-blue-600 font-medium">Depoimentos</a>
+                <a href="#preco" class="text-gray-700 hover:text-blue-600 font-medium">Preço</a>
+            </nav>
+            <button class="md:hidden text-gray-700" id="menu-toggle">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <!-- Mobile menu -->
+        <div class="md:hidden hidden bg-white py-4 px-4 shadow-lg" id="mobile-menu">
+            <a href="#beneficios" class="block py-2 text-gray-700 hover:text-blue-600">Benefícios</a>
+            <a href="#conteudo" class="block py-2 text-gray-700 hover:text-blue-600">Conteúdo</a>
+            <a href="#depoimentos" class="block py-2 text-gray-700 hover:text-blue-600">Depoimentos</a>
+            <a href="#preco" class="block py-2 text-gray-700 hover:text-blue-600">Preço</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white py-20">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Domine a Arte da Calistenia e Transforme Seu Corpo</h1>
+                <p class="text-xl mb-8">Aprenda as técnicas mais eficazes de treinamento com o peso do corpo para construir músculos, força e resistência sem precisar de academia.</p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#preco" class="bg-white text-blue-600 font-bold py-3 px-8 rounded-lg text-center hover:bg-gray-100 transition duration-300">Quero Me Inscrever Agora</a>
+                    <a href="#conteudo" class="border-2 border-white text-white font-bold py-3 px-8 rounded-lg text-center hover:bg-white hover:text-blue-600 transition duration-300">Ver Conteúdo</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                     alt="Homem praticando calistenia" 
+                     class="rounded-lg shadow-2xl max-w-full h-auto md:max-w-md">
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="beneficios" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">O Que Você Vai Ganhar Com Este Curso</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-lg feature-card transition duration-300">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-fire text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Força Explosiva</h3>
+                    <p class="text-gray-600">Aprenda progressões para desenvolver força muscular máxima usando apenas seu peso corporal, desde iniciante até movimentos avançados.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg feature-card transition duration-300">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-utensils text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Nutrição Específica</h3>
+                    <p class="text-gray-600">Plano alimentar detalhado com quantidades ideais de proteína, carboidratos e gorduras para maximizar seus resultados na calistenia.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg feature-card transition duration-300">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-calendar-check text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Rotinas Diárias</h3>
+                    <p class="text-gray-600">Programas de treino semanais com metas específicas de flexões, abdominais e outros exercícios, adaptáveis ao seu nível.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section id="conteudo" class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">O Que Você Vai Aprender</h2>
+            
+            <div class="flex flex-col md:flex-row items-center mb-16">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <img src="https://images.unsplash.com/photo-1538805060514-97d9cc17730c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" 
+                         alt="Progressão de exercícios" 
+                         class="rounded-lg shadow-lg w-full">
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-bold mb-4">Metas de Flexões e Progressões</h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Progressão desde flexões de joelhos até variações avançadas como flexões com palmas</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Metas semanais e mensais adaptáveis ao seu nível atual</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Técnicas para evitar lesões e maximizar os resultados</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Como superar platôs e continuar progredindo</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row-reverse items-center mb-16">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pl-8">
+                    <img src="https://images.unsplash.com/photo-1571019614242-c955c8a638dc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Rotina de abdominais" 
+                         class="rounded-lg shadow-lg w-full">
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-bold mb-4">Rotina de Abdominais por Dia</h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Programa de 30 dias com aumento gradual de intensidade</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Variações de exercícios para trabalhar todos os músculos abdominais</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Técnicas de respiração para potencializar os resultados</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Como integrar o treino de abdômen com outros grupos musculares</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1480&q=80" 
+                         alt="Alimentação para calistenia" 
+                         class="rounded-lg shadow-lg w-full">
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-bold mb-4">Quantidade de Comida e Proteína</h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Cálculo preciso de suas necessidades calóricas e proteicas</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Lista de alimentos ricos em proteína para cada refeição</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Receitas práticas e rápidas para ganho muscular</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Como ajustar sua alimentação conforme seu progresso nos treinos</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="depoimentos" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">O Que Nossos Alunos Dizem</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-md testimonial-card">
+                    <div class="flex items-center mb-4">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Aluno" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Carlos Silva</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Em 3 meses consegui fazer minha primeira muscle-up seguindo as progressões do curso. As metas semanais me mantiveram motivado!"</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md testimonial-card">
+                    <div class="flex items-center mb-4">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Aluna" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Ana Oliveira</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"A rotina de abdominais transformou meu core em 6 semanas. Nunca imaginei que poderia ter esses resultados sem equipamentos!"</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md testimonial-card">
+                    <div class="flex items-center mb-4">
+                        <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Aluno" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Ricardo Santos</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"O guia de nutrição foi o que faltava na minha rotina. Aprendi exatamente quanto de proteína preciso e como distribuir nas refeições."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="preco" class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Escolha Seu Plano</h2>
+            <div class="max-w-md mx-auto">
+                <div class="bg-white border-2 border-gray-200 rounded-xl p-8 text-center">
+                    <h3 class="text-xl font-bold mb-4">Plano Completo</h3>
+                    <div class="text-4xl font-bold mb-6">R$35<span class="text-lg text-gray-500">/mês</span></div>
+                    <ul class="space-y-3 mb-8 text-gray-600">
+                        <li class="flex items-center justify-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Todos os módulos do curso</span>
+                        </li>
+                        <li class="flex items-center justify-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Planos de treino por 90 dias</span>
+                        </li>
+                        <li class="flex items-center justify-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Acompanhamento semanal</span>
+                        </li>
+                        <li class="flex items-center justify-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Grupo exclusivo de alunos</span>
+                        </li>
+                    </ul>
+                    <a href="#" class="block bg-blue-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-700 transition duration-300">Assinar Agora</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4 max-w-3xl">
+            <h2 class="text-3xl font-bold text-center mb-12">Perguntas Frequentes</h2>
+            <div class="space-y-4">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <button class="flex justify-between items-center w-full text-left font-bold text-lg" onclick="toggleFAQ(1)">
+                        <span>Preciso de equipamentos para fazer o curso?</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300" id="faq-icon-1"></i>
+                    </button>
+                    <div class="mt-3 text-gray-600 hidden" id="faq-content-1">
+                        Não! O curso foi desenvolvido para que você possa treinar em qualquer lugar usando apenas o peso do seu corpo. Algumas aulas mostram como usar parques e mobiliário urbano, mas tudo é opcional.
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <button class="flex justify-between items-center w-full text-left font-bold text-lg" onclick="toggleFAQ(2)">
+                        <span>Quanto tempo por dia preciso dedicar aos treinos?</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300" id="faq-icon-2"></i>
+                    </button>
+                    <div class="mt-3 text-gray-600 hidden" id="faq-content-2">
+                        As rotinas variam de 20 a 45 minutos por dia, dependendo do seu nível e objetivos. O curso ensina como maximizar seus resultados mesmo com pouco tempo disponível.
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <button class="flex justify-between items-center w-full text-left font-bold text-lg" onclick="toggleFAQ(3)">
+                        <span>E se eu não conseguir fazer nenhuma flexão no início?</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300" id="faq-icon-3"></i>
+                    </button>
+                    <div class="mt-3 text-gray-600 hidden" id="faq-content-3">
+                        Não tem problema! O curso começa com exercícios preparatórios e versões modificadas para todos os níveis. Temos alunos que começaram sem conseguir nenhuma flexão e em poucas semanas já faziam séries completas.
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <button class="flex justify-between items-center w-full text-left font-bold text-lg" onclick="toggleFAQ(4)">
+                        <span>Como funciona a garantia?</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300" id="faq-icon-4"></i>
+                    </button>
+                    <div class="mt-3 text-gray-600 hidden" id="faq-content-4">
+                        Oferecemos 7 dias de garantia incondicional. Se dentro desse período você achar que o curso não é para você, devolvemos 100% do seu investimento sem burocracia.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-blue-600 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">Pronto para Transformar Seu Corpo com Calistenia?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Junte-se a mais de 5.000 alunos que já transformaram seus corpos e vidas com nosso método comprovado.</p>
+            <a href="#preco" class="inline-block bg-white text-blue-600 font-bold py-4 px-12 rounded-lg text-lg hover:bg-gray-100 transition duration-300">Quero Começar Agora</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="mb-8 md:mb-0">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-dumbbell text-blue-400 text-2xl mr-2"></i>
+                        <span class="text-xl font-bold">Master Calistenia</span>
+                    </div>
+                    <p class="text-gray-400 max-w-xs">O curso mais completo de treinamento com peso corporal do Brasil.</p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+                    <div>
+                        <h4 class="font-bold text-lg mb-4">Links</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#beneficios" class="text-gray-400 hover:text-white">Benefícios</a></li>
+                            <li><a href="#conteudo" class="text-gray-400 hover:text-white">Conteúdo</a></li>
+                            <li><a href="#depoimentos" class="text-gray-400 hover:text-white">Depoimentos</a></li>
+                            <li><a href="#preco" class="text-gray-400 hover:text-white">Preços</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg mb-4">Suporte</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-white">FAQ</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white">Contato</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white">Política de Privacidade</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white">Termos de Uso</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg mb-4">Redes Sociais</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-facebook"></i></a>
+                            <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-youtube"></i></a>
+                            <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-tiktok"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>© 2023 Master Calistenia. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // FAQ toggle function
+        function toggleFAQ(num) {
+            const content = document.getElementById(`faq-content-${num}`);
+            const icon = document.getElementById(`faq-icon-${num}`);
+            
+            content.classList.toggle('hidden');
+            icon.classList.toggle('rotate-180');
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    </script>
 </body>
 </html>
